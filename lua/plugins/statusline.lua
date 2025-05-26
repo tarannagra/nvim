@@ -1,31 +1,36 @@
 return {
     {
-        "sontungexpt/sttusline",
-        branch = "table_version",
+        "nvim-lualine/lualine.nvim",
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
-        event = { "BufEnter" },
-        config = function (_, opts)
-            require("sttusline").setup({
-                on_attach = function(create_update_group) end,
-                statusline_color = "StatusLine",
-                disabled = {
-                    filetypes = {
-                        "NvimTree",
-                        "lazy"
-                    }
-                },
-                components = {
-                    "filename",
-                    "git-branch",
-                    "git-diff",
-                    "%=",
-                    "diagnostics",
-                    -- "datetime"
-                }
+        config = function ()
+            require("lualine").setup({
+                options = {
+                    icons_enabled = true,
+                    theme = "auto",
+                    component_separators = { left = '', right = ''},
+                    section_separators = { left = '', right = ''},
+                    globalstatus = false,
+                    refresh = {
+                        statusline = 100,
+                        tabline = 100,
+                        winbar = 100,
+                    },
+                    -- sections
+                    sections = {
+                        -- left
+                        lualine_a = {'mode'},
+                        lualine_b = {"branch", "diff", "diagnostics"},
+                        lualine_c = {"filename"},
+                        -- right
+                        lualine_x = {"fileformat", "filetype"},
+                        lualine_y = {},
+                        lualine_z = {"location"},
+                    },
 
+                }
             })
-        end,
+        end
     }
 }
