@@ -37,3 +37,4 @@ vim.keymap.set("t", "<C-b>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>"
 -- Telescope
 vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>", {silent = true, desc = "Toggle Telescope's find_files"})
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>", {silent = true, desc = "Toggle Telescope's live_grep"})
+vim.keymap.set("n", "<Leader>gs", ":Telescope git_status<CR>", {silent = true, desc = "Toggle Telescope's git_status"})
