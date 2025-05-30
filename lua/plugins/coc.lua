@@ -4,4 +4,4 @@ return {
       branch = "release",
       build = "npm ci"
     }
-  }
+}

@@ -3,7 +3,7 @@ local api = vim.api
 
 -- Leader Key (similar to a super key)
 vim.g.mapleader = " "
-api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
+-- api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap("n", "<Leader>x", ":set wrap!<CR>", {noremap = true, silent = true})
 
 -- coc.nvim specific
@@ -38,3 +38,6 @@ vim.keymap.set("t", "<C-b>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>"
 vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>", {silent = true, desc = "Toggle Telescope's find_files"})
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>", {silent = true, desc = "Toggle Telescope's live_grep"})
 vim.keymap.set("n", "<Leader>gs", ":Telescope git_status<CR>", {silent = true, desc = "Toggle Telescope's git_status"})
+
+-- Obsidian
+vim.keymap.set("n", "<Leader>ch", "<CMD>lua require('markdown-toggle').checkbox()<CR>", {silent= true, desc = "Toggle Obsidian checkboxes."})

@@ -13,6 +13,7 @@ return {
             require("obsidian").setup({
                dir = "~/Documents/Obsidian/El Braino",
                notes_subdir = "095 - Unsorted Files",
+               new_notes_location = "notes_subdir",
                daily_notes = {
                     folder = "004 - Personal/Daily Notes",
                     template = "098 - Templates/Daily Template.md",
@@ -29,7 +30,10 @@ return {
                },
                attachments = {
                     img_folder = "000 - Attachments",
-               }
+               },
+               templates = {
+                    folder = "098 - Templates",
+               },
 
             })
         end
