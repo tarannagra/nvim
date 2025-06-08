@@ -3,7 +3,7 @@ return {
         "obsidian-nvim/obsidian.nvim",
         version = "*",
         lazy = true,
-        ft = "markdown", -- only enable plugin for markdown files
+        ft = "md", -- only enable plugin for markdown files
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim",

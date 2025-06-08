@@ -41,3 +41,9 @@ vim.keymap.set("n", "<Leader>gs", ":Telescope git_status<CR>", {silent = true, d
 
 -- Obsidian
 vim.keymap.set("n", "<Leader>ch", "<CMD>lua require('markdown-toggle').checkbox()<CR>", {silent= true, desc = "Toggle Obsidian checkboxes."})
+vim.keymap.set("n", "<Leader>os", ":ObsidianSearch<CR>", {silent = true, desc = "Toggle Obsidian search."})
+
+
+-- Splitting
+vim.keymap.set("n", "<Leader>hs", ":split<CR>", { silent = true, noremap = true, desc = "Split horizontally."})
+vim.keymap.set("n", "<Leader>vs", ":vsplit<CR>", { silent = true, noremap = true, desc = "Split vericatlly."})
