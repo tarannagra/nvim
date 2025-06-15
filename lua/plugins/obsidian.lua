@@ -2,8 +2,8 @@ return {
     {
         "obsidian-nvim/obsidian.nvim",
         version = "*",
-        lazy = true,
-        ft = "md", -- only enable plugin for markdown files
+        lazy = false,
+        -- ft = "md", -- only enable plugin for markdown files
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim",
@@ -18,9 +18,9 @@ return {
                     folder = "004 - Personal/Daily Notes",
                     template = "098 - Templates/Daily Template.md",
                },
-               -- completion = {
-               --     nvim_cmp = true,
-               -- }
+               completion = {
+                   nvim_cmp = true,
+               },
                picker = {
                    name = "telescope.nvim",
                    note_mappings = {
