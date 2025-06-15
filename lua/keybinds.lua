@@ -1,49 +1,52 @@
 local api = vim.api
 
-
 -- Leader Key (similar to a super key)
-vim.g.mapleader = " "
--- api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
-api.nvim_set_keymap("n", "<Leader>x", ":set wrap!<CR>", {noremap = true, silent = true})
-
--- coc.nvim specific
-api.nvim_set_keymap("i", "<Tab>", 'pumvisible() ? "\\<C-n>": "\\<Tab>"', { expr = true, noremap = true })
-api.nvim_set_keymap("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>": "\\<S-Tab>"', { expr = true, noremap = true })
-api.nvim_set_keymap("i", "<CR>", 'pumvisible() ? coc#_select_confirm() : "\\<CR>"', { expr = true, noremap = true })
-api.nvim_set_keymap("i", "<C-Space>", 'coc#refresh()', { expr = true, noremap = true })
-
--- nvim-tree specific
--- api.nvim_set_keymap("n", "<Leader>e", ':NvimTreeToggle<CR>', { silent = true, noremap = true })
--- api.nvim_set_keymap("n", "<Leader>f", ':NvimTreeFocus<CR>', { silent = true, noremap = true })
-
---- from https://github.com/nvim-tree/nvim-tree.lua/wiki/Recipes#smart-nvim-tree-toggling
-local nvimtree_determine_mode = function ()
-    local nvimTree = require("nvim-tree.api")
-    local current_buffer = api.nvim_get_current_buf()
-    local current_buffer_ft = api.nvim_get_option_value("filetype", {buf = current_buffer})
-    if current_buffer_ft == "NvimTree" then
-        nvimTree.tree.toggle()
-    else
-        nvimTree.tree.focus()
-    end
-end
-
-vim.keymap.set("n", "<A-b>", nvimtree_determine_mode, {noremap = true, silent = true})
+vim.g.mapleader = " " -- off to space we go!!!
+api.nvim_set_keymap("n", "<Leader>x", ":set wrap!<CR>", { noremap = true, silent = true })
 
 -- FTerm
 vim.keymap.set("n", "<C-b>", "<CMD>lua require('FTerm').toggle()<CR>")
 vim.keymap.set("t", "<C-b>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>")
 
--- Telescope
-vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>", {silent = true, desc = "Toggle Telescope's find_files"})
-vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep<CR>", {silent = true, desc = "Toggle Telescope's live_grep"})
-vim.keymap.set("n", "<Leader>gs", ":Telescope git_status<CR>", {silent = true, desc = "Toggle Telescope's git_status"})
+-- -- Telescope
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<Leader>ff",
+-- 	":Telescope find_files<CR>",
+-- 	{ silent = true, desc = "Toggle Telescope's find_files" }
+-- )
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<Leader>gs",
+-- 	":Telescope git_status<CR>",
+-- 	{ silent = true, desc = "Toggle Telescope's git_status" }
+-- )
 
--- Obsidian
-vim.keymap.set("n", "<Leader>ch", "<CMD>lua require('markdown-toggle').checkbox()<CR>", {silent= true, desc = "Toggle Obsidian checkboxes."})
-vim.keymap.set("n", "<Leader>os", ":ObsidianSearch<CR>", {silent = true, desc = "Toggle Obsidian search."})
-
+-- Markdown
+vim.keymap.set(
+	"n",
+	"<Leader>ch",
+	"<CMD>lua require('markdown-toggle').checkbox()<CR>",
+	{ silent = true, desc = "Toggle Obsidian checkboxes." }
+)
+vim.keymap.set("n", "<Leader>os", ":ObsidianSearch<CR>", { silent = true, desc = "Toggle Obsidian search." })
 
 -- Splitting
-vim.keymap.set("n", "<Leader>hs", ":split<CR>", { silent = true, noremap = true, desc = "Split horizontally."})
-vim.keymap.set("n", "<Leader>vs", ":vsplit<CR>", { silent = true, noremap = true, desc = "Split vericatlly."})
+vim.keymap.set("n", "<Leader>hs", ":split<CR>", { silent = true, noremap = true, desc = "Split horizontally." })
+vim.keymap.set("n", "<Leader>vs", ":vsplit<CR>", { silent = true, noremap = true, desc = "Split vericatlly." })
+
+-- Outline
+vim.keymap.set("n", "<Leader>o", "<CMD>Outline<CR>", { desc = "Toggle Outline" })
+vim.keymap.set("n", "<Leader>r", "<CMD>OutlineFocus<CR>", { desc = "Focus Outline" })
+
+-- Snacks
+--- Explorer
+vim.keymap.set("n", "<A-b>", "<CMD>lua Snacks.explorer()<CR>", { noremap = true, silent = true })
+--- LSP Conf
+vim.keymap.set("n", "gd", "<CMD>lua Snacks.picker.lsp_declarations()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "gi", "<CMD>lua Snacks.picker.diagnostics()<CR>", { noremap = true, silent = true })
+--- File picker 
+vim.keymap.set("n", "<Leader>fg", "<CMD>lua Snacks.picker.grep()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>ff", "<CMD>lua Snacks.picker.files({hidden = true,})<CR>", { noremap = true, silent = true })
+--- Dashboard
+-- vim.keymap.set("n", "<Leader>H", "<CMD>lua Snacks.dashboard()<CR>", { noremap = true, silent = true })
