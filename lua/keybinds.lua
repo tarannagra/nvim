@@ -49,4 +49,4 @@ vim.keymap.set("n", "gi", "<CMD>lua Snacks.picker.diagnostics()<CR>", { noremap 
 vim.keymap.set("n", "<Leader>fg", "<CMD>lua Snacks.picker.grep()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>ff", "<CMD>lua Snacks.picker.files({hidden = true,})<CR>", { noremap = true, silent = true })
 --- Dashboard
--- vim.keymap.set("n", "<Leader>H", "<CMD>lua Snacks.dashboard()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>H", "<CMD>lua Snacks.dashboard()<CR>", { noremap = true, silent = true })
