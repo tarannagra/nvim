@@ -39,9 +39,11 @@ vim.keymap.set("n", "<Leader>vs", ":vsplit<CR>", { silent = true, noremap = true
 vim.keymap.set("n", "<Leader>o", "<CMD>Outline<CR>", { desc = "Toggle Outline" })
 vim.keymap.set("n", "<Leader>r", "<CMD>OutlineFocus<CR>", { desc = "Focus Outline" })
 
+-- Neo-tree
+vim.keymap.set("n", "<A-b>", ":Neotree toggle<CR>", { silent = true })
+vim.keymap.set("n", "<A-v>", ":Neotree focus<CR>", { silent = true })
+
 -- Snacks
---- Explorer
-vim.keymap.set("n", "<A-b>", "<CMD>lua Snacks.explorer()<CR>", { noremap = true, silent = true })
 --- LSP Conf
 vim.keymap.set("n", "gd", "<CMD>lua Snacks.picker.lsp_declarations()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "gi", "<CMD>lua Snacks.picker.diagnostics()<CR>", { noremap = true, silent = true })

@@ -9,7 +9,7 @@ return {
 			bigfile = { enabled = false },
 			dashboard = { enabled = true },
 			explorer = {
-				enabled = true,
+				enabled = false,
 			},
 			indent = { enabled = true },
 			input = { enabled = true },
@@ -17,6 +17,10 @@ return {
 				enabled = true,
 				sources = {
 					explorer = {
+                        focus = "list",
+                        auto_close = false,
+                        follow_file = true,
+                        jump = { close = false },
 						layout = {
 							layout = { position = "right" },
 						},
