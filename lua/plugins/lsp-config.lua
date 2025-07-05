@@ -24,7 +24,6 @@ return {
             lspconfig.pyright.setup({
                 capabilities = capabilities
             })
-
             -- maps
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {}) -- for some reason, it duplicates the hovering thing
             vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, {})
