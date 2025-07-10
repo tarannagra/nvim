@@ -1,3 +1,5 @@
-# Taran's NVIM Configuration
+# Taran's Neovim Configuration
 
-- [x] sample
+Hello
+
+World
