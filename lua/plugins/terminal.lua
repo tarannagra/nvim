@@ -4,7 +4,7 @@ return {
         version = "*",
         config = function()
             require("FTerm").setup({
-                cmd = "nu"
+                cmd = "fish"
             })
         end
     }
