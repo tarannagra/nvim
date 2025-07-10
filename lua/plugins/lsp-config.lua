@@ -14,19 +14,37 @@ return {
         end
     },
     {
+        "nvim-java/nvim-java",
+    },
+    {
         "neovim/nvim-lspconfig",
         config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup({
-                capabilities = capabilities
+                capabilities = capabilities,
             })
             lspconfig.pyright.setup({
-                capabilities = capabilities
+                capabilities = capabilities,
+            })
+            lspconfig.ltex.setup({
+                language = "en-GB",
+                capabilities = capabilities,
+                filetypes = { "latex", "tex", "bib", "markdown", "gitcommit", "text" },
+            })
+            lspconfig.jdtls.setup({
+                capabilities = capabilities,
             })
             -- maps
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {}) -- for some reason, it duplicates the hovering thing
             vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, {})
         end
+    },
+    {
+        "vigoux/ltex-ls.nvim",
+        opts = {
+            use_spellfile = false,
+            window_border = 'single',
+        }
     },
 }
