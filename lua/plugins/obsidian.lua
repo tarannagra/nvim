@@ -36,6 +36,7 @@ return {
                },
 
             })
+            vim.opt.conceallevel = 1
         end
     }
 }

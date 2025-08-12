@@ -21,7 +21,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.showmode = false
 vim.opt.wrap = false
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 0
 
 -- Disable nvim's built in file tree
 vim.g.loaded_netrw = 1
