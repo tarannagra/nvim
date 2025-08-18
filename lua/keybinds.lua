@@ -52,3 +52,8 @@ vim.keymap.set("n", "<Leader>fg", "<CMD>lua Snacks.picker.grep()<CR>", { noremap
 vim.keymap.set("n", "<Leader>ff", "<CMD>lua Snacks.picker.files({hidden = true,})<CR>", { noremap = true, silent = true })
 --- Dashboard
 vim.keymap.set("n", "<Leader>H", "<CMD>lua Snacks.dashboard()<CR>", { noremap = true, silent = true })
+
+-- Renamer
+vim.api.nvim_set_keymap('i', "<F2>", "<CMD>lua require('renamer').rename()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', "<Leader>rn", "<CMD>lua require('renamer').rename()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', "<Leader>rn", "<CMD>lua require('renamer').rename()<CR>", {noremap = true, silent = true})
