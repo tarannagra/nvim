@@ -1,5 +1,3 @@
 # Taran's Neovim Configuration
 
-Hello
-
-World
+## Hello World

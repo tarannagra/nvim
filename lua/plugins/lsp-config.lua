@@ -9,7 +9,9 @@ return {
         "mason-org/mason-lspconfig.nvim",
         config = function()
             require('mason-lspconfig').setup({
-                ensure_installed = { "lua_ls" }
+                ensure_installed = {
+                    "lua_ls",
+                }
             })
         end
     },
@@ -24,7 +26,7 @@ return {
             lspconfig.lua_ls.setup({
                 capabilities = capabilities,
             })
-            lspconfig.pyright.setup({
+            lspconfig.basedpyright.setup({
                 capabilities = capabilities,
             })
             lspconfig.ltex.setup({
