@@ -3,7 +3,7 @@ return {
         "obsidian-nvim/obsidian.nvim",
         version = "*",
         lazy = false,
-        ft = "md", -- only enable plugin for markdown files
+        ft = "md",
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim",
@@ -11,7 +11,6 @@ return {
         },
         config = function ()
             require("obsidian").setup({
-                -- dir = "~/Documents/Obsidian/El Braino",
                 workspaces = {
                     {
                         name = "El Braino",
@@ -42,7 +41,6 @@ return {
                 },
                 legacy_commands = false,
             })
-            -- vim.opt.conceallevel = 1
         end
     }
 }
