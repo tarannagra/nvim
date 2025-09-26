@@ -2,10 +2,9 @@ return {
     {
         "numToStr/FTerm.nvim",
         version = "*",
-        config = function()
-            require("FTerm").setup({
-                cmd = "fish"
-            })
-        end
+        opts = {
+            cmd = os.getenv("SHELL"), -- Should now be universal to work on windows and Unix
+            auto_close = true,
+        },
     }
 }

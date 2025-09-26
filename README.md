@@ -1,7 +1,7 @@
-# Taran's Neovim Configuration
+# My Neovim Configuration
 
-This is my Neovim configuration. It is always changing and adapting as I discover new tools.
 
-## TODO 
 
-- [ ] Make, format, and add images of how this configuration looks.
+## Package Manager
+
+I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my package manager since I like its simplicity and ease of use.

@@ -9,7 +9,6 @@ return {
             require('mason-lspconfig').setup({
                 ensure_installed = {
                     "lua_ls",
-                    "basedpyright",
                     "jdtls",
                     "tinymist",
                     "harper_ls"
@@ -23,30 +22,22 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
-            local lspconfig = require('lspconfig')
-            lspconfig.emmet_language_server.setup({
-                capabilities = capabilities,
-                filetypes = {"html", "jsp", "css", "javascript"}
-            })
-            lspconfig.html.setup({
-                capabilities = capabilities,
-                filetypes = {"html", "jsp"}
-            })
-            lspconfig.jsonls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.basedpyright.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.cssls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.harper_ls.setup({
-                capabilities = capabilities,
+            -- vim.lsp.config("ruff", {
+            --     init_options = {
+            --         settings = {}
+            --     }
+            -- })
+            -- vim.lsp.enable("ruff")
+            vim.lsp.enable("bashls")
+            vim.lsp.enable("fish_lsp")
+            vim.lsp.enable("emmet_language_server")
+            vim.lsp.enable("html")
+            vim.lsp.enable("jsonls")
+            vim.lsp.enable("lua_ls")
+            vim.lsp.enable("cssls")
+            vim.lsp.enable("jdtls")
+
+            vim.lsp.config("harper_ls", {
                 settings = {
                     ["harper_ls"] = {
                         linters = {
@@ -65,22 +56,10 @@ return {
                         dialect = "British"
                     },
                 }
+
             })
-            lspconfig.jdtls.setup({
-                capabilities = capabilities,
-                filetypes = {
-                    "java",
-                    "jsp",
-                    "jspx",
-                },
-                settings = {
-                    java = {
-                        contentProvider = { preferred = "jsp" }
-                    }
-                }
-            })
-            lspconfig.tinymist.setup({
-                capabilities = capabilities,
+
+            vim.lsp.config("tinymist", {
                 settings = {
                     formatterMode = "typstyle",
                     exportPdf = "onType",
@@ -88,8 +67,9 @@ return {
                     outputPath = "$root/target/$dir/$name",
                 },
             })
-            -- maps
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {}) -- for some reason, it duplicates the hovering thing
+            vim.lsp.enable("tinymist")
+
+            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, {})
         end
     },

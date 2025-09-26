@@ -22,8 +22,6 @@ vim.keymap.set("n", "<Leader>vs", ":vsplit<CR>", { silent = true, noremap = true
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory", silent = true })
 
-vim.keymap.set("n", "<Leader>rn", ":IncRename ", { desc = "Rename", silent = true, noremap = true })
-
 -- Snacks
 vim.keymap.set("n", "gd", "<CMD>lua Snacks.picker.lsp_declarations()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "gi", "<CMD>lua Snacks.picker.diagnostics()<CR>", { noremap = true, silent = true })

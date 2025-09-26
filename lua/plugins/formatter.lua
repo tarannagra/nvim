@@ -1,13 +1,14 @@
 return {
 	{
-		"nvimtools/none-ls.nvim",
-		config = function()
-			local null_ls = require("null-ls")
-			null_ls.setup({
-				sources = {
-					null_ls.builtins.formatting.stylua,
-				},
-			})
-		end,
+		"stevearc/conform.nvim",
+		event = { "BufReadPre", "BufNewFile", "BufWritePre" },
+		opts = {
+			formatters_by_ft = {
+				lua = { "stylua" },
+				python = { "ruff_fix", "ruff_format" },
+				bash = { "shfmt" },
+				typst = { "typstyle" },
+			},
+		},
 	},
 }
