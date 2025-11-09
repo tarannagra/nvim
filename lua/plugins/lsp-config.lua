@@ -22,12 +22,6 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            -- vim.lsp.config("ruff", {
-            --     init_options = {
-            --         settings = {}
-            --     }
-            -- })
-            -- vim.lsp.enable("ruff")
             vim.lsp.enable("bashls")
             vim.lsp.enable("fish_lsp")
             vim.lsp.enable("emmet_language_server")
@@ -36,6 +30,8 @@ return {
             vim.lsp.enable("lua_ls")
             vim.lsp.enable("cssls")
             vim.lsp.enable("jdtls")
+            vim.lsp.enable("marksman")
+            vim.lsp.enable("lemminx")
 
             vim.lsp.config("harper_ls", {
                 settings = {
