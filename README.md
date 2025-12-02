@@ -1,6 +1,5 @@
-# My Neovim Configuration
+# Neovim (Braino) Configuration
+
+![Braino Dashboard](./.github/assets/dashboard.png)
 
 
-## Package Manager
-
-I use [lazy.nvim](https://github.com/folke/lazy.nvim) as my package manager since I like its simplicity and ease of use.
