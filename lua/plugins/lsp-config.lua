@@ -11,7 +11,7 @@ return {
                     "lua_ls",
                     "jdtls",
                     "tinymist",
-                    "harper_ls"
+                    -- "harper_ls"
                 }
             })
         end
@@ -33,27 +33,27 @@ return {
             vim.lsp.enable("marksman")
             vim.lsp.enable("lemminx")
 
-            vim.lsp.config("harper_ls", {
-                settings = {
-                    ["harper_ls"] = {
-                        linters = {
-                            SpellCheck = true,
-                            SpelledNumbers = false,
-                            AnA = true,
-                            SentenceCapitalization = true,
-                            UnclosedQuotes = true,
-                            WrongQuotes = false,
-                            LongSentences = true,
-                            RepeatedWords = true,
-                            Spaces = true,
-                            Matcher = true,
-                            CorrectNumberSuffix = true,
-                        },
-                        dialect = "British"
-                    },
-                }
-
-            })
+            -- vim.lsp.config("harper_ls", {
+            --     settings = {
+            --         ["harper_ls"] = {
+            --             linters = {
+            --                 SpellCheck = true,
+            --                 SpelledNumbers = false,
+            --                 AnA = true,
+            --                 SentenceCapitalization = true,
+            --                 UnclosedQuotes = true,
+            --                 WrongQuotes = false,
+            --                 LongSentences = true,
+            --                 RepeatedWords = true,
+            --                 Spaces = true,
+            --                 Matcher = true,
+            --                 CorrectNumberSuffix = true,
+            --             },
+            --             dialect = "British"
+            --         },
+            --     }
+            --
+            -- })
 
             vim.lsp.config("tinymist", {
                 settings = {
