@@ -17,43 +17,14 @@ return {
         end
     },
     {
-        "nvim-java/nvim-java",
-    },
-    {
         "neovim/nvim-lspconfig",
         config = function()
             vim.lsp.enable("bashls")
             vim.lsp.enable("fish_lsp")
-            vim.lsp.enable("emmet_language_server")
-            vim.lsp.enable("html")
             vim.lsp.enable("jsonls")
             vim.lsp.enable("lua_ls")
-            vim.lsp.enable("cssls")
-            vim.lsp.enable("jdtls")
+            -- vim.lsp.enable("jdtls")
             vim.lsp.enable("marksman")
-            vim.lsp.enable("lemminx")
-
-            -- vim.lsp.config("harper_ls", {
-            --     settings = {
-            --         ["harper_ls"] = {
-            --             linters = {
-            --                 SpellCheck = true,
-            --                 SpelledNumbers = false,
-            --                 AnA = true,
-            --                 SentenceCapitalization = true,
-            --                 UnclosedQuotes = true,
-            --                 WrongQuotes = false,
-            --                 LongSentences = true,
-            --                 RepeatedWords = true,
-            --                 Spaces = true,
-            --                 Matcher = true,
-            --                 CorrectNumberSuffix = true,
-            --             },
-            --             dialect = "British"
-            --         },
-            --     }
-            --
-            -- })
 
             vim.lsp.config("tinymist", {
                 settings = {
