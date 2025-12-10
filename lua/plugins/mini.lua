@@ -1,12 +1,7 @@
 return {
     {
-        "nvim-mini/mini.nvim",
+        "nvim-mini/mini.pairs",
         version = "*",
-        config = function ()
-            -- require('mini.surround').setup({})
-            require("mini.comment").setup({})
-            require("mini.jump").setup({})
-            require("mini.pairs").setup({})
-        end
+        opts = {},
     }
 }
