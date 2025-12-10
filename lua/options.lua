@@ -1,22 +1,24 @@
 -- Begone mouse!
-vim.opt.mouse = ""
-vim.opt.clipboard = "unnamedplus"
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.autoindent = true
-vim.opt.swapfile = false
+vim.o.mouse = ""
+vim.o.clipboard = "unnamedplus"
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.autoindent = true
+vim.o.swapfile = false
 
 -- UI
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.showmode = false
-vim.opt.wrap = false
-vim.opt.conceallevel = 0
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.splitright = true
+vim.o.splitbelow = true
+vim.o.showmode = false
+vim.o.wrap = false
+vim.o.conceallevel = 0
+vim.o.signcolumn = "yes"
+vim.o.winborder = "rounded"
 
 -- Disable Neovim's built-in file tree
 vim.g.loaded_netrw = 1
