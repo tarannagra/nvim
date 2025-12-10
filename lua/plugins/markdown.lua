@@ -26,8 +26,8 @@ return {
         lazy = false,
         ft = "md",
         dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
+            -- "nvim-lua/plenary.nvim",
+            -- "nvim-telescope/telescope.nvim",
             "nvim-treesitter/nvim-treesitter",
         },
         opts = {
@@ -44,10 +44,10 @@ return {
                 template = "098 - Templates/Daily Template.md",
             },
             completion = {
-                nvim_cmp = true,
+                blink = true,
             },
             picker = {
-                name = "telescope.nvim",
+                name = "fzf-lua",
                 note_mappings = {
                     new = "<C-X>",
                     insert_link = "<C-L>",
