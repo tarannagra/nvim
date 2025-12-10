@@ -30,4 +30,4 @@ vim.keymap.set("n", "gi", ":FzfLua lsp_document_diagnostics<CR>", { noremap = tr
 vim.keymap.set("n", "<Leader>fg", ":FzfLua live_grep<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>ff", ":FzfLua files<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>hh", ":FzfLua helptags<CR>", { noremap = true, silent = true })
--- vim.keymap.set("n", "<Leader>H", "<CMD>lua Snacks.dashboard()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>fb", ":FzfLua buffers<CR>", { noremap = true, silent = true })
