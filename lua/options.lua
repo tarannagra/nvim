@@ -23,3 +23,14 @@ vim.o.winborder = "rounded"
 -- Disable Neovim's built-in file tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.api.nvim_create_autocmd("OptionSet",{
+    pattern = "background",
+    callback = function()
+	if vim.o.background == "dark" then
+	    vim.cmd("colorscheme kanagawa")
+	else
+	    vim.cmd("colorscheme kanagawa-paper-canvas")
+	end
+    end,
+})

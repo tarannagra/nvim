@@ -22,9 +22,14 @@ return {
 					}
 				end,
 			})
-			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
+    {
+        "thesimonho/kanagawa-paper.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {},
@@ -91,4 +96,8 @@ return {
 			},
 		},
 	},
+    {
+        "folke/zen-mode.nvim",
+        opts = {},
+    },
 }

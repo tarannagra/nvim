@@ -25,6 +25,9 @@ vim.keymap.set("n", "<A-o>", ":Obsidian search<CR>", { silent = true, desc = "Pe
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory", silent = true })
 
+-- Zen Mode (not sure if this even works for me)
+vim.keymap.set("n", "zm", "<CMD>:ZenMode<CR>", { desc = "Toggle Zen Mode", silent = true })
+
 -- Picker
 vim.keymap.set("n", "gi", ":FzfLua lsp_document_diagnostics<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>fg", ":FzfLua live_grep<CR>", { noremap = true, silent = true })
