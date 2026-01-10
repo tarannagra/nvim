@@ -1,5 +1,5 @@
 -- Taran's Braino Keybinds
-local api = vim.api
+-- local api = vim.api
 
 -- Information:
 -- <leader> -> key to press before letters following that key
@@ -25,11 +25,9 @@ vim.keymap.set("n", "<A-o>", ":Obsidian search<CR>", { silent = true, desc = "Pe
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory", silent = true })
 
--- Zen Mode (not sure if this even works for me)
-vim.keymap.set("n", "zm", "<CMD>:ZenMode<CR>", { desc = "Toggle Zen Mode", silent = true })
-
 -- Picker
 vim.keymap.set("n", "gi", ":FzfLua lsp_document_diagnostics<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-e>", ":FzfLua buffers<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>fg", ":FzfLua live_grep<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>ff", ":FzfLua files<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>hh", ":FzfLua helptags<CR>", { noremap = true, silent = true })

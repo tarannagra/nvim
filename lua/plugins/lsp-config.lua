@@ -26,11 +26,27 @@ return {
                 },
             })
             vim.lsp.enable("tinymist")
-            vim.lsp.enable("pyright")
-            -- vim.lsp.enable("ruff")
+            -- vim.lsp.enable("pyright")
+            vim.lsp.config("ty", {})
+            vim.lsp.enable("ty")
+            -- vim.lsp.config("rust-analyzer", {
+            --     settings = {
+            --         ["rust-analyzer"] = {
+            --             diagnostics = {
+            --                 enable = true;
+            --             }
+            --         }
+            --     }
+            -- })
+            -- vim.lsp.enable("rust-analyzer")
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, {})
         end
+    },
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^6', -- Recommended
+        lazy = false, -- This plugin is already lazy
     },
 }
