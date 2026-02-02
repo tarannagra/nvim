@@ -10,6 +10,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
+            vim.lsp.enable("clangd")
             vim.lsp.enable("bashls")
             vim.lsp.enable("fish_lsp")
             vim.lsp.enable("jsonls")

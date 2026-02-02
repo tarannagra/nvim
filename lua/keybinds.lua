@@ -27,7 +27,7 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory", silen
 
 -- Picker
 vim.keymap.set("n", "gi", ":FzfLua lsp_document_diagnostics<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-e>", ":FzfLua buffers<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<A-b>", ":FzfLua buffers<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>fg", ":FzfLua live_grep<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>ff", ":FzfLua files<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>hh", ":FzfLua helptags<CR>", { noremap = true, silent = true })
