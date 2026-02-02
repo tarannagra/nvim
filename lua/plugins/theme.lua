@@ -127,12 +127,26 @@ return {
             local alpha = require("alpha")
             local dashboard = require("alpha.themes.dashboard")
 
-            dashboard.section.header.val = {
+            local upper_logo = {
+                "┏┓┏┓┏┓┳┓┏┓┓┏  ┏┳┓┓┏┏┓  ┏┓┏┓┓ ┏┓┏┓┏┓┓┏",
+                "┗┓┣ ┣┫┣┫┃ ┣┫   ┃ ┣┫┣   ┃┓┣┫┃ ┣┫ ┃┃ ┗┫",
+                "┗┛┗┛┛┗┛┗┗┛┛┗   ┻ ┛┗┗┛  ┗┛┛┗┗┛┛┗┗┛┗┛┗┛",
+            }
+
+            local lower_local = {
                 " ┏┓       ┓    ┓     ┏┓  ┓       ",
                 " ┗┓┏┓┏┓┏┓┏┣┓  ╋┣┓┏┓  ┃┓┏┓┃┏┓┓┏┓┏ ",
                 " ┗┛┗ ┗┻┛ ┗┛┗  ┗┛┗┗   ┗┛┗┻┗┗┻┛┗┗┫ ",
                 "                               ┛ ",
             }
+
+            dashboard.section.header.val = upper_logo
+            -- dashboard.section.header.val = {
+            --     " ┏┓       ┓    ┓     ┏┓  ┓       ",
+            --     " ┗┓┏┓┏┓┏┓┏┣┓  ╋┣┓┏┓  ┃┓┏┓┃┏┓┓┏┓┏ ",
+            --     " ┗┛┗ ┗┻┛ ┗┛┗  ┗┛┗┗   ┗┛┗┻┗┗┻┛┗┗┫ ",
+            --     "                               ┛ ",
+            -- }
 
             dashboard.section.buttons.val = {
                 dashboard.button("e", "󰈔  > New File", ":ene <BAR> startinsert <CR>"),
