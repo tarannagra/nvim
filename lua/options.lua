@@ -24,6 +24,8 @@ vim.o.winborder = "rounded"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.diagnostic.config({ virtual_text = false })
+
 vim.api.nvim_create_autocmd("OptionSet",{
     pattern = "background",
     callback = function()

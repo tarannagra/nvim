@@ -101,11 +101,12 @@ return {
                 },
             },
             attachments = {
-                img_folder = "000_assets",
+                folder = "000_assets",
             },
             templates = {
                 folder = "900_templates",
             },
+            legacy_commands = false,
             -- workspaces = {
             --     {
             --         name = "El Braino",
@@ -134,7 +135,6 @@ return {
             -- templates = {
             --     folder = "098 - Templates",
             -- },
-            -- legacy_commands = false,
         },
     },
 }
