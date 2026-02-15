@@ -27,7 +27,7 @@ vim.keymap.set("n", "<A-o>", ":Obsidian search<CR>", { silent = true, desc = "Pe
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory", silent = true })
 
 -- Buffer Manager
-vim.keymap.set("n", "bb", ":lua require('buffer_manager.ui').toggle_quick_menu()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "qe", ":lua require('buffer_manager.ui').toggle_quick_menu()<CR>", { noremap = true, silent = true })
 
 -- Picker
 vim.keymap.set("n", "gi", ":FzfLua lsp_document_diagnostics<CR>", { noremap = true, silent = true })
