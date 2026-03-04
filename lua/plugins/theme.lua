@@ -1,4 +1,5 @@
 return {
+    -- colourscheme start
     {
         "rebelot/kanagawa.nvim",
         name = "kanagawa",
@@ -30,6 +31,7 @@ return {
         priority = 1000,
         opts = {},
     },
+    -- colourscheme end
     {
         "nvim-lualine/lualine.nvim",
         dependencies = {},
