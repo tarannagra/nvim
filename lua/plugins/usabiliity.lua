@@ -25,4 +25,17 @@ return {
         "smjonas/inc-rename.nvim",
         opts = {}
     },
+    {
+        "saghen/blink.indent",
+        opts = {
+            blocked = {
+                buftypes = { include_defaults = true },
+                filetypes = { include_defaults = true },
+            },
+            mappings = {
+                border = "bottom",
+                object_scope = "ii",
+            }
+        },
+    },
 }

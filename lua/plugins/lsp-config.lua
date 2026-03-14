@@ -27,7 +27,6 @@ return {
                 },
             })
             vim.lsp.enable("tinymist")
-            -- vim.lsp.enable("pyright")
             vim.lsp.config("ty", {})
             vim.lsp.enable("ty")
             -- vim.lsp.config("rust-analyzer", {

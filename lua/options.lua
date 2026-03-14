@@ -24,9 +24,10 @@ vim.o.winborder = "rounded"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.g.indent_guide = true
 vim.diagnostic.config({ virtual_text = false })
 
-vim.api.nvim_create_autocmd("OptionSet",{
+vim.api.nvim_create_autocmd("OptionSet", {
     pattern = "background",
     callback = function()
 	if vim.o.background == "dark" then

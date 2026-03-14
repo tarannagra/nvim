@@ -36,6 +36,7 @@ vim.keymap.set("n", "<Leader>ff", ":FzfLua files<CR>", { noremap = true, silent 
 vim.keymap.set("n", "<Leader>hh", ":FzfLua helptags<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>fb", ":FzfLua buffers<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>gs", ":FzfLua git_status<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>gc", ":G commit<CR>", { noremap = true, silent = true })
 
 -- Aerial
 vim.keymap.set("n", "<A-,>", ":lua require('aerial').fzf_lua_picker()<CR>", { noremap = true, silent = true })
