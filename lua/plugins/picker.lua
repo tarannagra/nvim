@@ -2,7 +2,14 @@ return {
     {
         "ibhagwan/fzf-lua",
         dependencies = { "kyazdani42/nvim-web-devicons" },
-        opts = {}
+        opts = {
+            keymap = {
+                builtin = {
+                    ["<C-d>"] = "preview-page-down",
+                    ["<C-u>"] = "preview-page-up",
+                },
+            },
+        },
     },
     {
         "folke/snacks.nvim",

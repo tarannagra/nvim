@@ -25,6 +25,8 @@ vim.keymap.set("n", "<A-o>", ":Obsidian search<CR>", { silent = true, desc = "Pe
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory", silent = true })
+-- NvimTree (for big projects)
+vim.keymap.set("n", "<A-e>", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree", silent = true, noremap = true })
 
 -- Buffer Manager
 vim.keymap.set("n", "qe", ":lua require('buffer_manager.ui').toggle_quick_menu()<CR>", { noremap = true, silent = true })

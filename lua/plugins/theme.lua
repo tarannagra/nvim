@@ -31,6 +31,12 @@ return {
         priority = 1000,
         opts = {},
     },
+    {
+        "sainnhe/edge",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
     -- colourscheme end
     {
         "nvim-lualine/lualine.nvim",

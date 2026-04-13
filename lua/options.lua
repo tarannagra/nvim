@@ -19,6 +19,7 @@ vim.o.wrap = false
 vim.o.conceallevel = 0
 vim.o.signcolumn = "yes"
 vim.o.winborder = "rounded"
+vim.o.spell = true
 
 -- Disable Neovim's built-in file tree
 vim.g.loaded_netrw = 1

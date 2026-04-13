@@ -38,4 +38,19 @@ return {
             }
         },
     },
+    {
+        "folke/twilight.nvim",
+        opts = {},
+    },
+    {
+        "folke/zen-mode.nvim",
+        opts = {
+            window = {
+                backdrop = 1,
+            },
+        },
+    },
+    {
+        "preservim/vim-pencil",
+    },
 }
